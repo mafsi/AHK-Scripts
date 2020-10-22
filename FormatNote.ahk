@@ -5,8 +5,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #f::Run Firefox ; WIN+F
 
-::ref:: ; notă de referință
-Send,
+; Inserare referință
+::ref::
+Send, 
 (
 ---
 
@@ -15,7 +16,29 @@ Send,
 
 ---
 
-
-{*}{*}Cuvinte cheie{:}{*}{*} `
+{*}{*}Cuvinte cheie{*}{*}: `
 )
+return
+
+; Obsidian
+#IfWinActive, ahk_exe Obsidian.exe
+^+h::  ; CTRL+SHIFT+H Highlight
+Send,^c
+ClipWait
+Send, ==^v
+Return
+#IfWinActive
+
+; Obsidian
+#IfWinActive, ahk_exe Obsidian.exe
+$^l:: ; Internal link CTRL+L
+Send,^c
+ClipWait
+Send,[[^v]]
+Return
+#IfWinActive
+
+; TO DO LIST - press Alt+G
+!g::
+send - [ ]
 return
