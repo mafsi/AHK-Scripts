@@ -9,16 +9,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Inserare referință
-::ref::
+::btt::
 Send, 
 (
-{#}{#} Referință
-
-
-
 ---
 
 {*}{*}Cuvinte cheie{*}{*}: `
+
+{#}{#} Vezi și:
+
+- `
 )
 return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -26,7 +26,7 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
-^+h::  ; CTRL+SHIFT+H Highlight
+!h::  ; ALT+H Highlight
 Send,^c
 ClipWait
 Send, ==^v
@@ -77,3 +77,14 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;
 ::<<::«
 ::>>::»
+
+; Obsidian
+#IfWinActive, ahk_exe Obsidian.exe
+^k::   ;CTRL+K
+
+Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
+
+
+
+;;;;;;;;;;;;;;;;;;;
+!b::
