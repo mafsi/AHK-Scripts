@@ -2,14 +2,31 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance, Force ; Run only a single instance
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#f::Run Firefox ; WIN+F
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+^r::Reload
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;You Tube Download Gui
+#F2::
+Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
+Return
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; YouTube Video Playlist
+;#IfWinActive, ahk_class ConsoleWindowClass
+:*:ytplv::youtube-dl.exe -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
+Return
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; YouTube Audio
+; #IfWinActive, ahk_class ConsoleWindowClass
+:*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
+Return
+
+
 ; Inserare referință
-::btt::
+#IfWinActive, ahk_exe Obsidian.exe
+:*:btt::
 Send, 
 (
 ---
@@ -75,8 +92,8 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Ghilimele franțuzești
 ;;;;;;;;;;;;;;;;;;;;;;;
-::<<::«
-::>>::»
+:*:<<::«
+:*:>>::»
 
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
@@ -84,7 +101,3 @@ return
 
 Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 
-
-
-;;;;;;;;;;;;;;;;;;;
-!b::
