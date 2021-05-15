@@ -5,7 +5,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Run only a single instance
 
 ^r::Reload
-
+;
+#IfWinActive, ahk_exe Obsidian.exe
+:*:dp::dramatis personae
+;
+#IfWinActive, ahk_exe Obsidian.exe
+:*:pf::Pfister
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;You Tube Download Gui
 #F2::
