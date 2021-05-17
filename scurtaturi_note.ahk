@@ -5,7 +5,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Run only a single instance
 
 ^r::Reload
-
+;
+#IfWinActive, ahk_exe Obsidian.exe
+#IfWinActive, ahk_class Chrome_WidgetWin_1
+:*:dp::dramatis personae
+;
+#IfWinActive, ahk_exe Obsidian.exe
+#IfWinActive, ahk_class Chrome_WidgetWin_1
+:*:pf::Pfister
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;You Tube Download Gui
 #F2::
@@ -26,6 +33,7 @@ Return
 
 ; Inserare referință
 #IfWinActive, ahk_exe Obsidian.exe
+#IfWinActive, ahk_class Chrome_WidgetWin_1
 :*:btt::
 Send, 
 (
@@ -36,6 +44,10 @@ Send,
 {#}{#} Vezi și:
 
 - `
+
+{#}{#} Referințe`
+`
+
 )
 return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -54,6 +66,7 @@ Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
+#IfWinActive, ahk_class Chrome_WidgetWin_1
 $^l:: ; Internal link CTRL+L
 Send,^c
 ClipWait
@@ -97,6 +110,7 @@ return
 
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
+#IfWinActive, ahk_class Chrome_WidgetWin_1
 ^k::   ;CTRL+K
 
 Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
