@@ -5,37 +5,34 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Run only a single instance
 
 ^r::Reload
-;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #IfWinActive, ahk_exe Obsidian.exe
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 :*:dp::dramatis personae
-;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #IfWinActive, ahk_exe Obsidian.exe
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 :*:pf::Pfister
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;You Tube Download Gui
-#F2::
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#F2::  ; Launch You Tube Download Gui
 Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
 Return
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; YouTube Video Playlist
-;#IfWinActive, ahk_class ConsoleWindowClass
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#IfWinActive, ahk_class ConsoleWindowClass
 :*:ytplv::youtube-dl.exe -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
 Return
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; YouTube Audio
 ; #IfWinActive, ahk_class ConsoleWindowClass
 :*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
 Return
-
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Inserare referință
 #IfWinActive, ahk_exe Obsidian.exe
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 :*:btt::
-Send, 
+Send,
 (
 ---
 
@@ -50,9 +47,7 @@ Send,
 
 )
 return
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
 !h::  ; ALT+H Highlight
@@ -61,9 +56,7 @@ ClipWait
 Send, ==^v
 Return
 #IfWinActive
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
 #IfWinActive, ahk_class Chrome_WidgetWin_1
@@ -73,16 +66,12 @@ ClipWait
 Send,[[^v]]
 Return
 #IfWinActive
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; TO DO LIST - press Alt+G
 !g::
 send - [ ] `
 return
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ^+t::  ; Ctrl+Shif+t ; Translate clipboard
 {
  Send, ^c
@@ -90,8 +79,6 @@ return
  Run, https://translate.google.ro/#view=home&op=translate&sl=auto&tl=ro&text=%clipboard%
  Return
 }
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Duckgo Search highlighted text
 ^+s::  ; CTRL+SHIFT+S
@@ -102,16 +89,15 @@ return
  Return
 }
 
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Ghilimele franțuzești
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 :*:<<::«
 :*:>>::»
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Obsidian
 #IfWinActive, ahk_exe Obsidian.exe
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 ^k::   ;CTRL+K
-
 Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 
