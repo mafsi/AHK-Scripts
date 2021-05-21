@@ -5,15 +5,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Run only a single instance
 
 ^r::Reload
-;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 :*:dp::dramatis personae
 #If
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 :*:pf::Pfister
 #If
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;You Tube Download Gui
 #F2::
 Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
@@ -28,13 +28,13 @@ Return
 :*:ytplv::youtube-dl.exe -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
 Return
 #If
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; YouTube Audio
 #IfWinActive, ahk_exe powershell.exe
 :*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
 Return
 #If
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Inserare referință
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 :*:btt::
@@ -54,7 +54,7 @@ Send,
 )
 return
 #If
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 !h::  ; ALT+H Highlight
 Send,^c
@@ -71,13 +71,10 @@ Send,[[^v]]
 Return
 #If
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
->>>>>>> Stashed changes
 ; TO DO LIST - press Alt+G
 !g::
 send - [ ] `
 return
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ^+t::  ; Ctrl+Shif+t ; Translate clipboard
 {
@@ -97,19 +94,16 @@ return
  Run, https://duckduckgo.com/?t=ffab&q=%clipboard%
  Return
 }
-
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Ghilimele franțuzești
-;;;;;;;;;;;;;;;;;;;;;;;
 :*:<<::«
 :*:>>::»
-
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 ^k::   ;CTRL+K internal link personalised
 Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 #If
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; remapping keyboard
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
 !ă::[ ; Make key „ă” send „[”, only in Obsidian, Vs Code and Notepad++
