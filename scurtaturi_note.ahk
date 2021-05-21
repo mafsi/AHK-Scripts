@@ -5,48 +5,35 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Run only a single instance
 
 ^r::Reload
-<<<<<<< Updated upstream
 ;
-#IfWinActive, ahk_exe Obsidian.exe
-#IfWinActive, ahk_class Chrome_WidgetWin_1
+#If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 :*:dp::dramatis personae
-;
-#IfWinActive, ahk_exe Obsidian.exe
-#IfWinActive, ahk_class Chrome_WidgetWin_1
+#If
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 :*:pf::Pfister
+#If
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;You Tube Download Gui
 #F2::
 Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
 Return
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; YouTube Video Playlist
-;#IfWinActive, ahk_class ConsoleWindowClass
-=======
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
-:*:dp::dramatis personae
-#If
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
-:*:pf::Pfister
-#If
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #F2::  ; Launch You Tube Download Gui
 Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
 Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #IfWinActive, ahk_exe powershell.exe
->>>>>>> Stashed changes
 :*:ytplv::youtube-dl.exe -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
 Return
-
+#If
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; YouTube Audio
-; #IfWinActive, ahk_class ConsoleWindowClass
+#IfWinActive, ahk_exe powershell.exe
 :*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
 Return
-
+#If
 
 ; Inserare referință
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
@@ -66,43 +53,22 @@ Send,
 
 )
 return
-<<<<<<< Updated upstream
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-=======
 #If
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
->>>>>>> Stashed changes
-; Obsidian
+
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 !h::  ; ALT+H Highlight
 Send,^c
 ClipWait
 Send, ==^v
 Return
-<<<<<<< Updated upstream
-#IfWinActive
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-=======
 #If
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
->>>>>>> Stashed changes
-; Obsidian
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 $^l:: ; Internal link CTRL+L
 Send,^c
 ClipWait
 Send,[[^v]]
 Return
-<<<<<<< Updated upstream
-#IfWinActive
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-=======
 #If
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 >>>>>>> Stashed changes
@@ -138,16 +104,9 @@ return
 :*:<<::«
 :*:>>::»
 
-; Obsidian
-<<<<<<< Updated upstream
-#IfWinActive, ahk_exe Obsidian.exe
-#IfWinActive, ahk_class Chrome_WidgetWin_1
-^k::   ;CTRL+K
 
-=======
 #If WinActive ("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 ^k::   ;CTRL+K internal link personalised
->>>>>>> Stashed changes
 Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 #If
 
