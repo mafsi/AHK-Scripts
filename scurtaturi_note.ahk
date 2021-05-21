@@ -14,12 +14,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*:pf::Pfister
 #If
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;You Tube Download Gui
-#F2::
-Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
-Return
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #F2::  ; Launch You Tube Download Gui
 Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
 Return
@@ -111,3 +105,4 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 +!ă::{ ; Make key „ă” send „{”, only in Obsidian, Vs Code and Notepad++
 +!î::} ; Make key „î” send  „}”, only in Obsidian, Vs Code and Notepad++
 #If
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
