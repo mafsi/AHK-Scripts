@@ -139,16 +139,16 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 +!,::« ; Make key „SHIFT+ALT+,” send  „«”, only in Obsidian, Vs Code and Notepad++
 #If
 ;=============================================================================================
-; Mute / UnMute Microphone + Toggle
+; Mute / UnMute Microphone + Togle
 ;=============================================================================================
 ; Mute
 ;F9::
-;    Run nircmd.exe mutesysvolume 1 microphone
+;    Run nircmd.exe mutesysvolume 1 microphone 
 ;    Return
 ;
 ; Unmute
 ;F10::
-;    Run nircmd.exe mutesysvolume 0 microphone
+;    Run nircmd.exe mutesysvolume 0 microphone 
 ;    Return
 ;
 ; Toggle
@@ -156,5 +156,5 @@ F10::
     Run nircmd.exe mutesysvolume 2 default_record
     Return
 ;=============================================================================================
-;
+; 
 ;=============================================================================================
