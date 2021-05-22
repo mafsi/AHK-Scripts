@@ -123,12 +123,15 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 ; Remapping Keyboard
 ;=============================================================================================
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
-!ă::[ ; Make key „ă” send „[”, only in Obsidian, Vs Code and Notepad++
-!î::] ; Make key „î” send  „]”, only in Obsidian, Vs Code and Notepad++
-+!ă::{ ; Make key „ă” send „{”, only in Obsidian, Vs Code and Notepad++
-+!î::} ; Make key „î” send  „}”, only in Obsidian, Vs Code and Notepad++
+!ă::[ ; Make key „ALT+Ă” send „[”, only in Obsidian, Vs Code and Notepad++
+!î::] ; Make key „ALT+Î” send  „]”, only in Obsidian, Vs Code and Notepad++
++!ă::{ ; Make key „SHIFT+ALT+Ă” send „{”, only in Obsidian, Vs Code and Notepad++
++!î::} ; Make key „SHIFT+ALT+Î” send  „}”, only in Obsidian, Vs Code and Notepad++
+!.::> ; Make key „ALT+.” send  „>”, only in Obsidian, Vs Code and Notepad++
+!,::< ; Make key „ALT+,” send  „<”, only in Obsidian, Vs Code and Notepad++
++!.::» ; Make key „SHIFT+ALT+.” send  „»”, only in Obsidian, Vs Code and Notepad++
++!,::« ; Make key „SHIFT+ALT+,” send  „«”, only in Obsidian, Vs Code and Notepad++
 #If
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;=============================================================================================
-; 
+;
 ;=============================================================================================
