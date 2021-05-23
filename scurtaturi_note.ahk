@@ -2,7 +2,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-;#SingleInstance, Force ; Run only a single instance
+#SingleInstance, Force ; Run only a single instance
 Menu, Tray, Icon, script.ico
 Menu, Tray, Tip, Script AHK
 ;=============================================================================================
@@ -157,9 +157,27 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 ;
 ; Toggle
 F10::
-    Run nircmd.exe mutesysvolume 2 default_record
-    MsgBox, F10 Pressed
-    Return
+  on := !on
+  If on
+  {
+    Run nircmd.exe mutesysvolume 1 default_record
+    MsgBox, 0, STATUS MICROFON, Microfonul este oprit!, 3
+  }
+Else
+  {
+  Run nircmd.exe mutesysvolume 0 default_record
+   MsgBox, 0, STATUS MICROFON, Microfonul este pornit!, 3
+  }
+Return
 ;=============================================================================================
-;
+; Insert Current Date / Time only in Vs Code
+;=============================================================================================
+#If WinActive("ahk_exe Code.exe")
+!d::
+FormatTime, Data,, dddd, d MMMM yyyy / HH:mm:ss
+Send, %Data%
+Return
+#If
+;=============================================================================================
+; 
 ;=============================================================================================
