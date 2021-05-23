@@ -70,7 +70,7 @@ return
 ;=============================================================================================
 ; Evidențiere cuvînt în Obsidian și VS Code (ALT+H)
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
 !h::
 Send,^c
 ClipWait
@@ -127,7 +127,8 @@ return
 Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 #If
 ;=============================================================================================
-; Remapping Keyboard
+; Mapare tastatură // Tastatura în română este mapată pentru a oferi acces la unele taste
+; din engleză
 ;=============================================================================================
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
 !ă::[ ; Make key „ALT+Ă” send „[”, only in Obsidian, Vs Code and Notepad++
@@ -157,6 +158,7 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 ; Toggle
 F10::
     Run nircmd.exe mutesysvolume 2 default_record
+    MsgBox, F10 Pressed
     Return
 ;=============================================================================================
 ;
