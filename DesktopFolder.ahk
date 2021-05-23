@@ -1,6 +1,6 @@
 ; AHK script created by Lateralus138
 ; Create desktop folders with a hotkey
-; Key Control+Shift+f (^+f)
+; Key Shift+Alt+f (+!f)
 
 ; Tray icon function (just for fun),
 ; provide resource library name and

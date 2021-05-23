@@ -4,6 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;#SingleInstance, Force ; Run only a single instance
 Menu, Tray, Icon, script.ico
+Menu, Tray, Tip, Script AHK
 ;=============================================================================================
 ; Put active App on Top (WIN+A)
 ;=============================================================================================
