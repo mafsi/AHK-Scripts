@@ -74,7 +74,7 @@ return
 !h::
 Send,^c
 ClipWait
-Send, ==^v
+Send, ==^v==
 Return
 #If
 ;=============================================================================================
@@ -138,6 +138,8 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 !,::< ; Make key „ALT+,” send  „<”, only in Obsidian, Vs Code and Notepad++
 +!.::» ; Make key „SHIFT+ALT+.” send  „»”, only in Obsidian, Vs Code and Notepad++
 +!,::« ; Make key „SHIFT+ALT+,” send  „«”, only in Obsidian, Vs Code and Notepad++
+!â::\ ; Make key „ALT+Â” send „\” only in Obsidian, Vs Code and Notepad++
++!â::| ; Make keu „SHIFT+ALT+Â” send | only in Obsidian, Vs Code and Notepad++
 #If
 ;=============================================================================================
 ; Mute / UnMute Microphone + Toggle
