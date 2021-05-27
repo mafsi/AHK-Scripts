@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Run only a single instance
 Menu, Tray, Icon, script.ico
-Menu, Tray, Tip, Script AHK
+Menu, Tray, Tip, Main Script AHK
 ;=============================================================================================
 ; Put active App on Top (WIN+A)
 ;=============================================================================================
@@ -26,10 +26,10 @@ Return
 ; Send „Pfister”
 ;=============================================================================================
 #If WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
-:*:pf::Pfister
+::pf::Pfister 
 #If
 ;=============================================================================================
-; Launch You Tube Download Gui
+; Launch You Tube Download Gui (WIN+F2)
 ;=============================================================================================
 #F2::
 Run, "C:\Program Files (x86)\Youtube-DLG\youtube-dl-gui.exe"
@@ -133,14 +133,15 @@ Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
 !ă::[ ; Make key „ALT+Ă” send „[”, only in Obsidian, Vs Code and Notepad++
 !î::] ; Make key „ALT+Î” send  „]”, only in Obsidian, Vs Code and Notepad++
-+!ă::{ ; Make key „SHIFT+ALT+Ă” send „{”, only in Obsidian, Vs Code and Notepad++
-+!î::} ; Make key „SHIFT+ALT+Î” send  „}”, only in Obsidian, Vs Code and Notepad++
+!+ă::{ ; Make key „ALT+SHIFT+Ă” send „{”, only in Obsidian, Vs Code and Notepad++
+!+î::} ; Make key „ALT+SHIFT+Î” send  „}”, only in Obsidian, Vs Code and Notepad++
 !.::> ; Make key „ALT+.” send  „>”, only in Obsidian, Vs Code and Notepad++
 !,::< ; Make key „ALT+,” send  „<”, only in Obsidian, Vs Code and Notepad++
-+!.::» ; Make key „SHIFT+ALT+.” send  „»”, only in Obsidian, Vs Code and Notepad++
-+!,::« ; Make key „SHIFT+ALT+,” send  „«”, only in Obsidian, Vs Code and Notepad++
+!+.::» ; Make key „ALT+SHIFT+.” send  „»”, only in Obsidian, Vs Code and Notepad++
+!+,::« ; Make key „ALT+SHIFT+,” send  „«”, only in Obsidian, Vs Code and Notepad++
 !â::\ ; Make key „ALT+Â” send „\” only in Obsidian, Vs Code and Notepad++
-+!â::| ; Make keu „SHIFT+ALT+Â” send | only in Obsidian, Vs Code and Notepad++
+!+â::| ; Make keu „ALT+SHIFT+Â” send | only in Obsidian, Vs Code and Notepad++
+:*:„::„”{Left} ; Send „” when pressing just „
 #If
 ;=============================================================================================
 ; Mute / UnMute Microphone + Toggle
@@ -172,15 +173,15 @@ Return
 ;=============================================================================================
 ; Insert Current Date / Time only in Vs Code
 ;=============================================================================================
-#If WinActive("ahk_exe Code.exe")
+#If WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe notepad++.exe")
 !d::
 FormatTime, Data,, dddd, d MMMM yyyy / HH:mm:ss
 Send, %Data%
 Return
 #If     
 ;=============================================================================================
-; Change between Languages in OS
+; Change between Languages in OS (Right CTRL+/)
 ;=============================================================================================
-F1::
+>^/::
 Send, #{Space}
 Return
