@@ -26,7 +26,7 @@ Return
 ; Send „Pfister”
 ;=============================================================================================
 #If WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
-::pf::Pfister 
+:*:pf::Pfister
 #If
 ;=============================================================================================
 ; Launch You Tube Download Gui (WIN+F2)
@@ -178,7 +178,7 @@ Return
 FormatTime, Data,, dddd, d MMMM yyyy / HH:mm:ss
 Send, %Data%
 Return
-#If     
+#If
 ;=============================================================================================
 ; Change between Languages in OS (Right CTRL+/)
 ;=============================================================================================
