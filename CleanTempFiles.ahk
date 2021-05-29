@@ -27,6 +27,7 @@ Glob(list, "C:\Documents and Settings\*\Local Settings\History\*.*")
 Glob(list, "C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\l69utceo.default-release\cache2\entries\*")
 Glob(list, "C:\Users\*\Downloads\*")
 Glob(list, "C:\Users\patrick\AppData\Roaming\obsidian\Cache\*")
+Glob(list, "C:Windows\Temp\*")
 
 Loop, Parse, list, `n
 {
