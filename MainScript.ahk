@@ -45,13 +45,13 @@ Return
 ; Download You Tube Video Playlist from CLI
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe")
-:*:ytplv::youtube-dl.exe -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
+:*:ytplv::youtube-dl.exe -o '%(playlist_index)s.%(title)s.%(ext)s' -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
 Return
 ;=============================================================================================
 ; Download You Tube Audio from CLI
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe")
-:*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
+:*:yta::youtube-dl.exe --extract-audio --audio-format flac --audio-quality 0 ''
 Return
 ;=============================================================================================
 ; Inserare referință în Obsidian și VS Code
