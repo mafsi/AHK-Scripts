@@ -23,6 +23,13 @@ Return
 Return
 #If
 ;=============================================================================================
+; Send „aî” == astfel încît
+;=============================================================================================
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
+::aî::astfel încît
+Return
+#If
+;=============================================================================================
 ; Send „dramatis personae”
 ;=============================================================================================
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
@@ -46,6 +53,12 @@ Return
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe")
 :*:ytplv::youtube-dl.exe -o '%(playlist_index)s.%(title)s.%(ext)s' -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
+Return
+;=============================================================================================
+; Tesseract-OCR
+;=============================================================================================
+#If WinActive("ahk_exe powershell.exe")
+:*:tess::tesseract .\SELECTEDFILES.txt Book -l eng pdf
 Return
 ;=============================================================================================
 ; Download You Tube Audio from CLI
