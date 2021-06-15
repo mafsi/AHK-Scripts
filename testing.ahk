@@ -34,3 +34,18 @@ MsgBox, 0, testing!
 return
 */
 
+
+; ALT+ ← (Left arrow) - Previous track
+<!Left::Send {Media_Prev}
+
+; ALT + → (Right arrow) - Next track
+<!Right::Send {Media_Next}
+
+; ALT + DOWN - Volume down at 20%
+<!Down::SoundSet 20
+
+; ALT + UP - Volume up at 50%
+<!Up::SoundSet 50
+
+; ALT+ M - Mute Volume
+;!m::Send {VOLUME_MUTE}
