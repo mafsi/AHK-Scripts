@@ -190,7 +190,7 @@ Else
   }
 Return
 ;=============================================================================================
-; Insert Current Date / Time only in Vs Code
+; Insert Current Date / Time only in Vs Code (ALT+D)
 ;=============================================================================================
 #If WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe notepad++.exe")
 !d::
@@ -217,5 +217,19 @@ RAlt & l::
 Run, C:\Program Files (x86)\Dopamine\Dopamine.exe
 Return
 ;=============================================================================================
-; Tooltip for CAPSLOCK ON/OFF
+; Volume & Music control Play/Pause music/Next/Prev
+;=============================================================================================
+; lALT+ ← (Left arrow) - Previous track
+<!Left::Send {Media_Prev}
+
+; lALT + → (Right arrow) - Next track
+<!Right::Send {Media_Next}
+
+; lALT + DOWN - Volume down at 20%
+<!Down::SoundSet 20
+
+; lALT + UP - Volume up at 50%
+<!Up::SoundSet 50
+;=============================================================================================
+; 
 ;=============================================================================================
