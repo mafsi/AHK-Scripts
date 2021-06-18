@@ -101,10 +101,10 @@ Return
 ; Inserare link intern în Obsidian și VS Code (CTRL+L)
 ;=============================================================================================
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
-$^l::
+^l::
 Send,^c
 ClipWait
-Send,[[^v]]
+Send, [[^v
 Return
 #If
 ;=============================================================================================
@@ -143,7 +143,14 @@ return
 ;=============================================================================================
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
 ^k::
-Send, [[{Left}{Space}{Left}|{Left}{Space}{Left}
+Clipboard := ""
+Sleep, 1
+Send, ^c
+ClipWait
+Send, [[|%clipboard%
+length := StrLen(Clipboard)+1
+Send {Left %length%}
+Return
 #If
 ;=============================================================================================
 ; Mapare tastatură // Tastatura în română este mapată pentru a oferi acces la unele taste
