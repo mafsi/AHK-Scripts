@@ -219,17 +219,20 @@ Return
 ;=============================================================================================
 ; Volume & Music control Play/Pause music/Next/Prev
 ;=============================================================================================
+; rAlt + p - Play/Stop Music
+RAlt & p::Send {Media_Play_Pause}
+
 ; lALT+ ← (Left arrow) - Previous track
-<!Left::Send {Media_Prev}
+<^Left::Send {Media_Prev}
 
 ; lALT + → (Right arrow) - Next track
-<!Right::Send {Media_Next}
+<^Right::Send {Media_Next}
 
 ; lALT + DOWN - Volume down at 20%
-<!Down::SoundSet 20
+<^Down::SoundSet 20
 
 ; lALT + UP - Volume up at 50%
-<!Up::SoundSet 50
+<^Up::SoundSet 50
 ;=============================================================================================
-; 
+;
 ;=============================================================================================
