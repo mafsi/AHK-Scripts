@@ -139,10 +139,10 @@ return
 :*:<<::«
 :*:>>::»
 ;=============================================================================================
-; Internal link personalized (CTRL+K)
+; Internal link personalized (LEFT ALT+K)
 ;=============================================================================================
 #If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe")
-^k::
+<!k::
 Clipboard := ""
 Sleep, 1
 Send, ^c
@@ -229,17 +229,17 @@ Return
 ; rAlt + p - Play/Stop Music
 RAlt & p::Send {Media_Play_Pause}
 
-; lALT+ ← (Left arrow) - Previous track
-<^Left::Send {Media_Prev}
+; LEFT ALT+ ← (Left arrow) - Previous track
+<!Left::Send {Media_Prev}
 
-; lALT + → (Right arrow) - Next track
-<^Right::Send {Media_Next}
+; LEFT ALT + → (Right arrow) - Next track
+<!Right::Send {Media_Next}
 
-; lALT + DOWN - Volume down at 20%
-<^Down::SoundSet 20
+; F8 - Volume down at 20%
+F8::SoundSet 20
 
-; lALT + UP - Volume up at 50%
-<^Up::SoundSet 50
+; F9 - Volume up at 50%
+F9::SoundSet 50
 ;=============================================================================================
 ;
 ;=============================================================================================
