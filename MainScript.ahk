@@ -241,6 +241,6 @@ F8::SoundSet 20
 ; F9 - Volume up at 50%
 F9::SoundSet 50
 ;=============================================================================================
-; ScreenShot (PrintScreen)
+; ScreenShot (PrintScreen) cu Decupare si selectie
 ;=============================================================================================
 PrintScreen::Send #+s
