@@ -64,7 +64,7 @@ Return
 ; Download You Tube Audio from CLI
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe")
-:*:yta::youtube-dl.exe --extract-audio --audio-format flac --audio-quality 0 ''
+:*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
 Return
 ;=============================================================================================
 ; Inserare referință în Obsidian și VS Code
