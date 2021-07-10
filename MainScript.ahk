@@ -236,10 +236,10 @@ RAlt & p::Send {Media_Play_Pause}
 <!Right::Send {Media_Next}
 
 ; F8 - Volume down at 20%
-F8::SoundSet 20
+F8::SoundSet -10
 
 ; F9 - Volume up at 50%
-F9::SoundSet 50
+F9::SoundSet +10
 ;=============================================================================================
 ; ScreenShot (PrintScreen) cu Decupare si selectie
 ;=============================================================================================
