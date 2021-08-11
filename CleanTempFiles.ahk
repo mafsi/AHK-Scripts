@@ -38,10 +38,10 @@ else
 	FileDelete, %A_LoopField%
 }
 
-MsgBox, Clean-up complete.
+MsgBox, Curatare completa!
 
 ;Uncomment (Remove the semi-colon) this next line if you want to see what couldn't be deleted.
-;MsgBox %list%
+MsgBox %list%
 
 Glob(ByRef list, Pattern, IncludeDirs=1)
 {
