@@ -13,12 +13,12 @@ jobs:
       - name: Ahk2Exe
         uses: nekocodeX/GitHub-Action-Ahk2Exe@main
         with:
-          in: MainScript.ahk
+          in: ./MainScript.ahk
 
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: MainScript.exe
+          files: ./MainScript.exe
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
