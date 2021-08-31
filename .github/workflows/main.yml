@@ -1,6 +1,6 @@
 name: Example usage of GitHub-Action-Ahk2Exe and softprops/action-gh-release
 
-on: push
+on: [push]
 
 jobs:
   Example2:
