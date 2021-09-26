@@ -18,28 +18,28 @@ Return
 ;=============================================================================================
 ; Send „dpdv”
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe texstudio.exe")
 ::dpdv::din punct de vedere
 Return
 #If
 ;=============================================================================================
 ; Send „aî” == astfel încît
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 ::aî::astfel încît
 Return
 #If
 ;=============================================================================================
 ; Send „dramatis personae”
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 ::dp::dramatis personae
 Return
 #If
 ;=============================================================================================
 ; Send „Pfister”
 ;=============================================================================================
-#If WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 :*:pf::Pfister
 #If
 ;=============================================================================================
@@ -69,7 +69,7 @@ Return
 ;=============================================================================================
 ; Inserare referință în Obsidian și VS Code
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 :*:btt::
 Send,
 (
@@ -90,7 +90,7 @@ return
 ;=============================================================================================
 ; Evidențiere cuvînt în Obsidian și VS Code (ALT+H)
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 !h::
 Send,^c
 ClipWait
@@ -100,7 +100,7 @@ Return
 ;=============================================================================================
 ; Inserare link intern în Obsidian și VS Code (CTRL+L)
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 ^l::
 Send,^c
 ClipWait
@@ -141,7 +141,7 @@ return
 ;=============================================================================================
 ; Internal link personalized (LEFT ALT+K)
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 <!k::
 Clipboard := ""
 Sleep, 1
@@ -156,7 +156,7 @@ Return
 ; Mapare tastatură // Tastatura în română este mapată pentru a oferi acces la unele taste
 ; din engleză
 ;=============================================================================================
-#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 !ă::[ ; Make key „ALT+Ă” send „[”, only in Obsidian, Vs Code and Notepad++
 !î::] ; Make key „ALT+Î” send  „]”, only in Obsidian, Vs Code and Notepad++
 !+ă::{ ; Make key „ALT+SHIFT+Ă” send „{”, only in Obsidian, Vs Code and Notepad++
@@ -199,7 +199,7 @@ Return
 ;=============================================================================================
 ; Insert Current Date / Time only in Vs Code (ALT+D)
 ;=============================================================================================
-#If WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe")
+#If WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Obsidian.exe") || WinActive("ahk_exe notepad++.exe") || WinActive("ahk_exe Zettlr.exe") || WinActive("ahk_exe texstudio.exe")
 !d::
 FormatTime, Data,, dddd, d MMMM yyyy / HH:mm:ss
 Send, %Data%
