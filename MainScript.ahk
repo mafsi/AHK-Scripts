@@ -55,6 +55,12 @@ Return
 :*:ytplv::youtube-dl.exe -o '%(playlist_index)s.%(title)s.%(ext)s' -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
 Return
 ;=============================================================================================
+; LatexMK
+;=============================================================================================
+#If WinActive("ahk_exe powershell.exe") || WinActive("ahk_exe WindowsTerminal.exe")
+::lmk::latexmk -pvc -pvctimeout
+Return
+;=============================================================================================
 ; Tesseract-OCR
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe") || WinActive("ahk_exe WindowsTerminal.exe")
