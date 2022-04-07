@@ -58,7 +58,7 @@ Return
 ; LatexMK
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe") || WinActive("ahk_exe WindowsTerminal.exe") || WinActive("ahk_exe Code.exe")
-::lmk::latexmk -pvc -pvctimeout
+::lmk::latexmk
 Return
 ;=============================================================================================
 ; Tesseract-OCR
