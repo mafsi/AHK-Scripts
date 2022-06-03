@@ -52,7 +52,7 @@ Return
 ; Download You Tube Video Playlist from CLI
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe") || WinActive("ahk_exe WindowsTerminal.exe")
-:*:ytplv::youtube-dl.exe -o '%(playlist_index)s.%(title)s.%(ext)s' -i -f mp4 --write-sub --sub-lang en --yes-playlist ''
+:*:ytplv::yt-dlp.exe -c -f mp4 --write-subs --sub-format srt --sub-langs en,ro --progress --yes-playlist ''
 Return
 ;=============================================================================================
 ; LatexMK
@@ -70,7 +70,7 @@ Return
 ; Download You Tube Audio from CLI
 ;=============================================================================================
 #If WinActive("ahk_exe powershell.exe") || WinActive("ahk_exe WindowsTerminal.exe")
-:*:yta::youtube-dl.exe --extract-audio --audio-format mp3 --audio-quality 0 ''
+:*:yta::yt-dlp.exe -c -x --audio-format mp3 --audio-quality 0 ''
 Return
 ;=============================================================================================
 ; Inserare referință în Obsidian și VS Code
